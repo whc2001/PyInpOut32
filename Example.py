@@ -20,7 +20,7 @@ def Beep(freq, dura):
     
 def Setup():
     if not InpOut32.IsInpOutDriverOpen():
-        raise("Driver open error, please run with admin pivilege or run 'InstallDriver.exe' first!")
+        raise("Driver open error, please run with admin privilege or run 'InstallDriver.exe' first!")
 
 def Loop():
     for i in range(len(freqs)):
