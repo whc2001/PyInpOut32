@@ -14,9 +14,8 @@ def Beep(freq, dura):
         tmp = InpOut32.DlPortReadPortUchar(97)
         InpOut32.DlPortWritePortUchar(97, (tmp | 3))
     sleep(dura / 1000)
-    if freq > 0:
-        tmp = InpOut32.DlPortReadPortUchar(97)
-        InpOut32.DlPortWritePortUchar(97, (tmp & 252))
+    tmp = InpOut32.DlPortReadPortUchar(97)
+    InpOut32.DlPortWritePortUchar(97, (tmp & 252))
     
 def Setup():
     if not InpOut32.IsInpOutDriverOpen():
